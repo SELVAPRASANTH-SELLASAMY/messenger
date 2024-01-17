@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './css/app.css';
+import Messenger from './Messenger';
+import Conversations from './Conversations';
+import { useState } from 'react';
 function App() {
+  const [convId,setConvId] = useState();
+  const [convObj,setConvObj] = useState([]);
+  const [windowWidth,setWindowWidth] = useState('');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Messenger windowWidth={windowWidth} setWindowWidth={setWindowWidth} setConvObj={setConvObj} setConvId={setConvId}/>
+      {convId !== undefined ? <Conversations windowWidth={windowWidth} setWindowWidth={setWindowWidth} convObj={convObj} convId={convId}/> : null}
     </div>
-  );
+  )
 }
 
 export default App;

@@ -1,0 +1,33 @@
+.Messenger{
+    width: fit-content;
+    display: inline-flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.Messenger h1{
+    font-size: 2em;
+    color: var(--uiColor);
+    font-weight: 700;
+    font-style: italic;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+.client-list{
+    width: 25rem;
+    height: fit-content;
+    overflow: auto;
+    padding: 0 1rem;
+    background-color: white;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+
+@media screen and (max-width:769px){
+    .client-list{
+        width: 100vw;
+    }
+    .hide-messenger{
+        display: none;
+    }
+}

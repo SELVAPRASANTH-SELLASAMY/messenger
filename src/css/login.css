@@ -1,0 +1,194 @@
+.Login{
+    width: 100%;
+    display: flex;
+    font-size: 15px;
+}
+.Login .login-svg{
+    height: 12rem;
+    width: 12rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.Login .login-svg2{
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.login-image{
+    height: 100vh;
+    width: 55%;
+    background-image: url('../assets/IT.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.login-form{
+    width: 45rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+form{
+    width: 85%;
+    height: fit-content;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    margin: auto;
+}
+form .input-field{
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+form .input-field p{
+    color: red;
+    font-size: 1em;
+    position: absolute;
+    bottom: -2rem;
+    right: .25rem;
+}
+form input{
+    height: 2.5rem;
+    font-size: 1em;
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    border-bottom: .1rem solid rgb(193, 193, 193);
+    outline: none;
+    padding: 0 1rem;
+}
+form label{
+    font-size: 1em;
+    position: absolute;
+    bottom: .5rem;
+    left: .5rem;
+    pointer-events: none;
+    transition: 500ms;
+    display: flex;
+    align-items: center;
+}
+form label img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 .25rem;
+    transition: 500ms;
+}
+input:focus ~ label, input:valid ~ label{
+    bottom: 2rem;
+    font-size: .85em;
+}
+input:focus ~ label img, input:valid ~ label img{
+    height: 1.25rem;
+    width: 1.25rem;
+}
+input:focus ~ .line, input:valid ~ .line{
+    width: 100%;
+}
+form .line{
+    height: .1rem;
+    width: 0%;
+    background-color: var(--uiColor);
+    position: absolute;
+    bottom: 0;
+    transition: 500ms;
+}
+button{
+    padding: .5rem 1.5rem;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin: 0 auto;
+    background-color: var(--uiColor);
+    color: white;
+    font-style: italic;
+}
+button:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transform: scale(1.01);
+}
+form h1{
+    font-size: 2.5em;
+    margin: .5rem .5rem;
+}
+form p{
+    font-size: 1em;
+    margin: 0 .5rem;
+    margin-bottom: .5rem;
+}
+.show-password{
+    display: inline-flex;
+    align-items: center;
+}
+.show-password p{
+    font-size: .75em;
+    text-wrap: nowrap;
+    margin: 0 .25rem;
+}
+.show-password input{
+    height: .85rem;
+    width: .85rem;
+    cursor: pointer;
+}
+.forget-password{
+    width: 100%;
+    display: flex;
+    margin-bottom: 1.5rem;
+    padding: 0 .5rem;
+}
+.forget-password a{
+    font-size: .75em;
+    text-decoration: none;
+    color: var(--uiColor);
+    font-weight: 500;
+    margin-left: auto;
+}
+.response-message{
+    color: red;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1000px) {
+    .Login{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width:768px) {
+    .Login{
+        flex-direction: column;
+    }
+    .login-image{
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1280/896;
+    }
+    .login-form{
+        width: 100vw;
+        margin-bottom: 2rem;
+    }
+    .login-svg,.login-svg2{
+        display: none;
+    }
+}
+@media screen and (max-width:426px){
+    form{
+        width: 95%;
+    }
+    /* .login-image{
+        height: 15rem;
+    } */
+}
+@media screen and (max-width:376px){
+    form h1{
+        font-size: 2em;
+    }
+}

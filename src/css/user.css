@@ -1,0 +1,45 @@
+.user img{
+    height: 4rem;
+    min-width: 4rem;
+    border-radius: 50%;
+    background-color: lightgrey;
+    border: .1rem solid var(--uiColor);
+}
+.user .username{
+    font-size: 1.15em;
+    font-weight: 500;
+}
+.user{
+    display: flex;
+    background-color: white;
+    border-radius: .5rem;
+    align-items: center;
+    cursor: pointer;
+    padding: .5rem;
+    margin: .25rem 0;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.user:hover{
+    background-color: var(--uiHover);
+}
+.info{
+    /* background-color: green; */
+    width: 100%;
+    margin-left: .5rem;
+}
+.info p{
+    width: 17rem;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+}
+abbr{
+    text-decoration: none;
+}
+.received,.edited{
+    font-size: .75em;
+}
+.Active{
+    background-color: var(--uiColor) !important;
+    color: white;
+}
