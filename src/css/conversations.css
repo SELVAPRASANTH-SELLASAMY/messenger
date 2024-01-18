@@ -48,8 +48,6 @@
     background-color: var(--uiHover);
 }
 .options :nth-child(2){
-    height: 2.5rem;
-    width: 2.5rem;
     border-radius: 50%;
     padding: .55rem;
 }
@@ -89,10 +87,6 @@ p.chat{
     }
     .Conversations{
         width: 100%;
-        display: none;
-    }
-    .showConversation{
-        display: inline-flex;
     }
     .options{
         right: 1rem;
@@ -104,5 +98,22 @@ p.chat{
 @media screen and (max-width:426px) {
     .userName{
         max-width: 30%;
+    }
+    p.chat{
+        margin: .5rem 1rem;
+    }
+}
+@media screen and (max-width:376px){
+    .options img,.goback img{
+        height: 2rem;
+        width: 2rem;
+    }
+    .profile-picture img{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .profile-picture{
+        height: 2.5rem;
+        width: 2.5rem;
     }
 }

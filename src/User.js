@@ -1,11 +1,7 @@
 import './css/user.css';
-function User({setWindowWidth,setConvId,id,username,received,edited}){
-    function setWidth(){
-        const width = window.innerWidth;
-        width <=769 ? setWindowWidth(width) : setWindowWidth(null);
-    }
+function User({setConvId,id,username,received,edited}){
     return(
-        <div onClick = {()=>{setConvId(id);setWidth()}} className={`user`}>
+        <div onClick = {()=>{setConvId(id);}} className={`user`}>
             <img src="" alt="" />
             <div className="info">
                 <p className="username"><abbr title={username}>{username}</abbr></p>
