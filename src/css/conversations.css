@@ -6,6 +6,7 @@
     vertical-align: top;
     overflow-y: auto;
     max-height: 100vh;
+    padding-bottom: 3.5rem;
 }
 .header{
     display: flex;
@@ -100,6 +101,25 @@ p.chat{
 textarea:focus{
     height: 10rem;
 }
+.send{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50px;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    right: .45rem;
+    bottom: .65rem;
+    cursor: pointer;
+}
+.send img{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: .15rem;
+}
+.send:hover{
+    background-color: var(--uiHover);
+}
 
 @media screen and (max-width:769px){
     .goback{
@@ -117,6 +137,7 @@ textarea:focus{
     .reply{
         width: 90%;
         left: 0;
+        margin: 0 5%;
     }
 }
 @media screen and (max-width:426px) {
@@ -139,10 +160,5 @@ textarea:focus{
     .profile-picture{
         height: 2.5rem;
         width: 2.5rem;
-    }
-}
-@media screen and (max-width:600px){
-    .reply{
-        width: 85%;
     }
 }

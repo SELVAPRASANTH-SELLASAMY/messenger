@@ -8,11 +8,20 @@ function Conversations({setWidth,convObj,convId,setConvId}){
     const [convArray,setConvArray] = useState();
     const convRef = useRef();
     const backbutton = useRef();
+    const ConvClass = document.querySelector('.Conversations');
     useEffect(()=>{
         const filteredObj = filterConv(convObj,convId);
         setConvArray(filteredObj);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[convObj, convId])
+
+    function addPadding(){
+        ConvClass.style.paddingBottom = '10rem';
+    }
+    function removePadding(){
+        ConvClass.style.paddingBottom = '3.5rem';
+    }
+
     function filterConv(obj,id){
         return obj.filter(item => item._id === id);
     }
@@ -38,9 +47,12 @@ function Conversations({setWidth,convObj,convId,setConvId}){
                     </p>
                 ))
             }
-            {/* <div className="reply">
-                <textarea name="reply-text-field" id="reply-text-field" placeholder='Type a message' cols="30" rows="10"></textarea>
-            </div> */}
+            <div className="reply">
+                <textarea onFocus={()=>addPadding()} onBlur={()=>removePadding()} name="reply-text-field" id="reply-text-field" placeholder='Type a message' cols="30" rows="10"></textarea>
+                <div className="send">
+                    <img src={sendButtonIcon} alt="Send" />
+                </div>
+            </div>
         </div>
     );
 }
