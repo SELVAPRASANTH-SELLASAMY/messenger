@@ -2,9 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 15px;
 }
 @media screen and (max-width:769px){
     .hide-client-list{
         display: none;
+    }
+}
+@media screen and (max-width:321px){
+    .App{
+        font-size: 12px;
     }
 }

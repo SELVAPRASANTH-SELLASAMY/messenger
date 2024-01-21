@@ -2,6 +2,7 @@ import './css/conversations.css';
 import emaiIcon from './assets/svg/mail.svg';
 import phoneIcon from './assets/svg/phone.svg';
 import gobackIcon from './assets/svg/back.svg';
+import sendButtonIcon from './assets/svg/send.svg';
 import { useEffect, useRef, useState } from 'react';
 function Conversations({setWidth,convObj,convId,setConvId}){
     const [convArray,setConvArray] = useState();
@@ -12,12 +13,6 @@ function Conversations({setWidth,convObj,convId,setConvId}){
         setConvArray(filteredObj);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[convObj, convId])
-    useEffect(()=>{
-        backbutton.current.addEventListener('click',()=>{
-            convRef && convRef.current.classList.remove('showConversation');
-        })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
     function filterConv(obj,id){
         return obj.filter(item => item._id === id);
     }
@@ -43,6 +38,9 @@ function Conversations({setWidth,convObj,convId,setConvId}){
                     </p>
                 ))
             }
+            {/* <div className="reply">
+                <textarea name="reply-text-field" id="reply-text-field" placeholder='Type a message' cols="30" rows="10"></textarea>
+            </div> */}
         </div>
     );
 }
