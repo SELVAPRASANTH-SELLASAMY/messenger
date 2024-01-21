@@ -97,6 +97,7 @@ p.chat{
     padding: .85rem 1rem;
     outline: none;
     transition: 250ms;
+    background-color: white;
 }
 textarea:focus{
     height: 10rem;
@@ -110,6 +111,7 @@ textarea:focus{
     position: absolute;
     right: .45rem;
     bottom: .65rem;
+    background-color: white;
     cursor: pointer;
 }
 .send img{
